@@ -1,0 +1,40 @@
+//Автогенератор классов
+@import "lib/grid";
+
+//Клвсс главного блока
+@app-class: box;
+@app-size-rhythm:10px;
+
+//Определение шрифтов
+#group > .font-face("PT-Sans", "pt-sans/pt-sans-r400", 400, normal);
+#group > .font-face("PT-Sans", "pt-sans/pt-sans-r700", bold, normal);
+
+@app-font: "PT-Sans", sans-serif;
+
+//Базовый размер шрифта
+@app-h1: 40px;
+@app-h2: 20px;
+@app-h3: 18px;
+@app-size-text: 12px;
+
+//Генерация сетки
+@app-size:12; //Количество столбцов в сетки
+@app-columm:60px; //Ширина колонки
+@app-gutter:20px; //Ширина промежутка между колонками
+@app-padding:20px; //Боковой отступ вокруг главного класса
+
+//Типографика
+//yes -> включено : no -> выключено
+@app-grid:yes; 
+@app-rhythm:yes;
+
+//Палитра
+@color-body:#434343;
+
+//Структура
+@import "less/page";
+@import "less/colorbox";
+@import "less/head";
+@import "less/content";
+@import "less/btn";
+@import "less/foot";

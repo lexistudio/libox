@@ -1,0 +1,59 @@
+* {
+  outline: none;
+}
+
+body {
+  .rhythm(yes) {
+    background: -webkit-linear-gradient(top, #eeeeee 1px, transparent 1px);
+    background: -moz-linear-gradient(top, #eeeeee 1px, transparent 1px);
+    background: -ms-linear-gradient(top, #eeeeee 1px, transparent 1px);
+    background: -o-linear-gradient(top, #eeeeee 1px, transparent 1px);
+    background: linear-gradient(top, #eeeeee 1px, transparent 1px);
+    background-size: auto @app-size-rhythm;
+  }
+  .rhythm(no) {}
+  .rhythm(@app-rhythm);
+}
+
+.@{app-class} {
+  @app-size-null:@app-size - 1;
+  width: (@app-columm * @app-size) + (@app-gutter * @app-size-null);
+  margin: auto;
+  padding: 0 @app-padding;
+  .rows {
+    .grid(yes) {
+      background: -webkit-linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
+      background: -moz-linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
+      background: -ms-linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
+      background: -o-linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
+      background: linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
+      background-position: 0 0;
+      background-size: @app-columm + @app-gutter;
+    }
+    .grid(no) {}
+    .grid(@app-grid);
+    &:after {
+      content: " ";
+      display:block;
+      clear:both;
+    }
+  }
+  div[class*="columm"] {
+    float:left;
+    margin-left: @app-gutter;
+  }
+  .class(@index) when (@index > 0) {
+    .columm-@{index} {
+      @index-null:@index - 1;
+      width: (@app-columm * @index) + (@app-gutter * @index-null);
+    }
+    .class(@index - 1);
+  }
+  .class(@app-size);
+  .first {
+    margin-left: 0 !important;
+  }
+  .last {
+    margin-right: 0 !important;
+  }
+}

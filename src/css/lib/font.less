@@ -1,0 +1,11 @@
+#group {
+  .font-face(@font-name, @font-file, @font-weight, @font-style) {
+    @font-face {
+      font-family: @font-name;
+      src: url("/fnt/@{font-file}.eot");
+      src: local("☺︎"), url("/fnt/@{font-file}.eot?#iefix") format("embedded-opentype"), url("/fnt/@{font-file}.woff") format("woff"), url("/fnt/@{font-file}.ttf") format("truetype"), url("/fnt/@{font-file}.svg#webfont") format("svg");
+      font-style: @font-style;
+      font-weight: @font-weight;
+    }
+  }
+}
