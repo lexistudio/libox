@@ -1,0 +1,1 @@
+npm install --save-dev gulp gulp-less --save-dev gulp-minify-css --save-dev gulp-requirejs-optimize --save-dev gulp-sftp
