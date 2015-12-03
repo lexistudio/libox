@@ -25,6 +25,15 @@
     background: linear-gradient(top, @gradient1, @gradient2);
   }
 
+  .gradient(horisontal, @gradient3, @gradient4) {
+    background: @gradient3;
+    background: -webkit-linear-gradient(left, @gradient3, @gradient4);
+    background: -moz-linear-gradient(left, @gradient3, @gradient4);
+    background: -ms-linear-gradient(left, @gradient3, @gradient4);
+    background: -o-linear-gradient(left, @gradient3, @gradient4);
+    background: linear-gradient(left, @gradient3, @gradient4);
+  }
+
   .border-radius(@radius) {
     -webkit-border-radius:@radius;
     -moz-border-radius:@radius;
@@ -49,8 +58,13 @@
   .clearfix() {
     &:after {
       content: " ";
-      display: block;
+      display: table;
       clear: both;
     }
+  }
+
+  .center-box() {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

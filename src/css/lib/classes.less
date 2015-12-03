@@ -22,24 +22,24 @@ body {
   padding: 0 @app-padding;
   .rows {
     .grid(yes) {
-      background: -webkit-linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
-      background: -moz-linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
-      background: -ms-linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
-      background: -o-linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
-      background: linear-gradient(left, rgba(200,200,200,.3) @app-columm, transparent @app-columm);
+      background: -webkit-linear-gradient(left, fadeout(@color-grid, @color-grid-opacity) @app-columm, transparent @app-columm);
+      background: -moz-linear-gradient(left, fadeout(@color-grid, @color-grid-opacity) @app-columm, transparent @app-columm);
+      background: -ms-linear-gradient(left, fadeout(@color-grid, @color-grid-opacity) @app-columm, transparent @app-columm);
+      background: -o-linear-gradient(left, fadeout(@color-grid, @color-grid-opacity) @app-columm, transparent @app-columm);
+      background: linear-gradient(left, fadeout(@color-grid, @color-grid-opacity) @app-columm, transparent @app-columm);
       background-position: 0 0;
       background-size: @app-columm + @app-gutter;
     }
     .grid(no) {}
     .grid(@app-grid);
     &:after {
-      content: " ";
-      display:block;
-      clear:both;
+      content: "";
+      display: table;
+      clear: both;
     }
   }
   div[class*="columm"] {
-    float:left;
+    float: left;
     margin-left: @app-gutter;
   }
   .class(@index) when (@index > 0) {
@@ -52,8 +52,10 @@ body {
   .class(@app-size);
   .first {
     margin-left: 0 !important;
+    clear: left;
   }
   .last {
     margin-right: 0 !important;
+    clear: right;
   }
 }
