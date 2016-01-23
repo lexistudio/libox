@@ -1,7 +1,8 @@
-define(["lib/jquery", "lib/waypoints"], function() {
+define(["lib/jquery", "lib/waypoints", "lib/lexispoler"], function() {
   $(function() {
     alert("libox - успешно установлен");
     points();
+    spoler();
   });
 
   function points() {
@@ -10,6 +11,12 @@ define(["lib/jquery", "lib/waypoints"], function() {
         console.log(w);
       },
       offset: "10%"
+    });
+  }
+
+  function spoler() {
+    $(".lexi-btn").lexispoler({
+      mode: "fade"
     });
   }
 })
