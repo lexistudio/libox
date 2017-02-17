@@ -38,12 +38,12 @@ body {
       clear: both;
     }
   }
-  div[class*="columm"] {
+  div[class*="column"] {
     float: left;
     margin-left: @app-gutter;
   }
   .class(@index) when (@index > 0) {
-    .columm-@{index} {
+    .column-@{index} {
       @index-null:@index - 1;
       width: (@app-columm * @index) + (@app-gutter * @index-null);
     }

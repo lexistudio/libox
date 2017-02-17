@@ -1,6 +1,6 @@
 define(["lib/jquery", "lib/waypoints", "lib/lexispoler"], function() {
   $(function() {
-    alert("libox - успешно установлен");
+    console.log("libox - успешно установлен");
     points();
     spoler();
   });
