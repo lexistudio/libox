@@ -1,5 +1,5 @@
 ## flexbox
-``` css
+``` less
 #flex > .init();
 #flex > .init(inline);
 
